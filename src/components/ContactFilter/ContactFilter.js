@@ -1,4 +1,5 @@
 import css from './ContactFilter.module.css';
+import PropTypes from 'prop-types';
 export function ContactFilter({ handleChange, value }) {
   return (
     <>
@@ -15,3 +16,8 @@ export function ContactFilter({ handleChange, value }) {
     </>
   );
 }
+
+ContactFilter.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+};
